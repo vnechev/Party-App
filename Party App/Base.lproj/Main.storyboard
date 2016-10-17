@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -60,14 +59,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VkT-06-VPe">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="Heq-ju-Eb8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="Heq-ju-Eb8" customClass="PartyCell" customModule="Party_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Heq-ju-Eb8" id="uAO-Te-qY8">
-                                            <frame key="frameInset" width="375" height="59.5"/>
+                                            <frame key="frameInset" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baner" translatesAutoresizingMaskIntoConstraints="NO" id="ihb-KT-qFl">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ihb-KT-qFl">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="5nd-F2-3sI"/>
                                                         <constraint firstAttribute="width" constant="60" id="dvj-a3-nl5"/>
@@ -84,14 +83,17 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="ihb-KT-qFl" firstAttribute="leading" secondItem="uAO-Te-qY8" secondAttribute="leading" constant="5" id="JgJ-FU-hxQ"/>
                                                 <constraint firstItem="ihb-KT-qFl" firstAttribute="centerY" secondItem="uAO-Te-qY8" secondAttribute="centerY" id="Oza-GP-x0Z"/>
-                                                <constraint firstItem="Iw8-mG-bLg" firstAttribute="leading" secondItem="ihb-KT-qFl" secondAttribute="trailing" constant="63" id="Wd7-Rm-K4E"/>
+                                                <constraint firstItem="Iw8-mG-bLg" firstAttribute="centerX" secondItem="uAO-Te-qY8" secondAttribute="centerX" id="TOh-xE-N0z"/>
                                                 <constraint firstItem="Iw8-mG-bLg" firstAttribute="centerY" secondItem="uAO-Te-qY8" secondAttribute="centerY" id="aKg-4y-gmg"/>
-                                                <constraint firstItem="ihb-KT-qFl" firstAttribute="leading" secondItem="uAO-Te-qY8" secondAttribute="leading" constant="5" id="itl-ED-bdy"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Iw8-mG-bLg" secondAttribute="trailing" constant="64" id="tPk-OX-fgT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="0.43370150862068968" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="cellImage" destination="ihb-KT-qFl" id="asU-tY-dsI"/>
+                                            <outlet property="videoTitleCellLbl" destination="Iw8-mG-bLg" id="wtO-DP-CVo"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -111,6 +113,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="VkT-06-VPe" id="K4Z-3n-acr"/>
                         <segue destination="l2w-FF-4A5" kind="showDetail" identifier="VideoVCsegue" id="h7K-Aj-Jce"/>
                     </connections>
                 </viewController>
