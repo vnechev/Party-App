@@ -23,7 +23,7 @@ class PartyCell: UITableViewCell {
         
         let url = URL(string: partyRock.imageURL)
         
-        DispatchQueue.global().async {
+        DispatchQueue.global().sync {
             do {
                 let data = try Data(contentsOf: url!)
                 DispatchQueue.global().sync {

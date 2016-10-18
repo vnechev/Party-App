@@ -41,6 +41,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let partyRock = partyRocks[indexPath.row]
         performSegue(withIdentifier: "VideoVCsegue", sender: partyRock)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
           if  let destinationController = segue.destination as? VideoVC  {
