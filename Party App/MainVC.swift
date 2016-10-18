@@ -36,8 +36,19 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             cell.update(partyRock: partyRock)
             return cell
         
-        
     }
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let partyRock = partyRocks[indexPath.row]
+        performSegue(withIdentifier: "VideoVCsegue", sender: partyRock)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+          if  let destinationController = segue.destination as? VideoVC  {
+            if let party = sender as? PartyRock{
+                destinationController.partyRock = party
+            }
+            
+        }
+    }
 }
 
