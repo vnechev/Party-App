@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2548a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -133,7 +134,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="DsW-en-LzJ">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DsW-en-LzJ">
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="UJG-sO-zuU"/>
@@ -142,20 +143,21 @@
                             </webView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aE-EN-Eo4">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="LfT-ZU-D4e"/>
+                                    <constraint firstAttribute="height" constant="60" id="XhU-B5-Hu9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6aE-EN-Eo4" firstAttribute="centerY" secondItem="Mxy-T0-tVx" secondAttribute="centerY" id="7lz-mA-VaN"/>
-                            <constraint firstItem="6aE-EN-Eo4" firstAttribute="centerX" secondItem="Mxy-T0-tVx" secondAttribute="centerX" id="C4T-cB-ybh"/>
-                            <constraint firstItem="DsW-en-LzJ" firstAttribute="top" secondItem="Mxy-T0-tVx" secondAttribute="top" id="Kjf-IA-Iyy"/>
                             <constraint firstAttribute="trailing" secondItem="DsW-en-LzJ" secondAttribute="trailing" id="KyZ-MU-FzF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6aE-EN-Eo4" secondAttribute="trailing" constant="25" id="Qo5-Ay-zSf"/>
                             <constraint firstItem="DsW-en-LzJ" firstAttribute="leading" secondItem="Mxy-T0-tVx" secondAttribute="leading" id="Quj-wt-tGp"/>
+                            <constraint firstItem="6aE-EN-Eo4" firstAttribute="leading" secondItem="Mxy-T0-tVx" secondAttribute="leadingMargin" constant="25" id="VOh-tB-6QG"/>
+                            <constraint firstItem="6aE-EN-Eo4" firstAttribute="top" secondItem="DsW-en-LzJ" secondAttribute="bottom" constant="30" id="hPB-38-bpA"/>
+                            <constraint firstItem="DsW-en-LzJ" firstAttribute="top" secondItem="Mxy-T0-tVx" secondAttribute="top" constant="10" id="hX1-m3-LF0"/>
                         </constraints>
                     </view>
                     <connections>

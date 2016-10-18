@@ -19,11 +19,13 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
-        let testURL = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/kV-2Q8QtCY4\" frameborder=\"0\" allowfullscreen></iframe>"
+        let testURL = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/_W7wqQwa-TU\" frameborder=\"0\" allowfullscreen></iframe>"
+        
+        let testURL2 = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/R9v1oHOUAVg\" frameborder=\"0\" allowfullscreen></iframe>"
         
         let p1 = PartyRock(imageURL: "https://upload.wikimedia.org/wikipedia/en/b/b2/Metallica_-_Master_of_Puppets_cover.jpg", videoURL: testURL, titleURL: "Metallica")
         partyRocks.append(p1)
-        let p2 = PartyRock(imageURL: "https://upload.wikimedia.org/wikipedia/en/8/82/Metallica_-_Ride_the_Lightning_cover.jpg", videoURL: testURL, titleURL: "Ride the lightning")
+        let p2 = PartyRock(imageURL: "https://upload.wikimedia.org/wikipedia/en/8/82/Metallica_-_Ride_the_Lightning_cover.jpg", videoURL: testURL2, titleURL: "Ride the lightning")
         partyRocks.append(p2)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

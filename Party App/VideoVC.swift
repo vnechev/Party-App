@@ -29,6 +29,8 @@ class VideoVC: UIViewController {
         titleLbl.text = partyRock.titleUTL
         webView.loadHTMLString(partyRock.videoURL, baseURL: nil)
         // Do any additional setup after loading the view.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(VideoVC.closeToMainVC))
+        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +38,8 @@ class VideoVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func closeToMainVC()  {
+        self.dismiss(animated: true, completion: nil)
+    }
    
 }
